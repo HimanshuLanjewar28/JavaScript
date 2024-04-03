@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4</title>
+</head>
+<body style="background-color: #212121; color:white">
+    <ul class="lang">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addLang(langName){
+       const newLi = document.createElement('li')
+       newLi.innerHTML = `${langName}`
+       document.querySelector('.lang').appendChild(newLi)
+    }
+    addLang("Java")
+    addLang("TypeScript")
+
+    function addOptiLang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.lang').appendChild(li)
+    }
+    addOptiLang("Python")
+
+    //value edit
+    // 1) approach first
+    const valueEdit = document.querySelector("li:nth-child(2)")
+    //valueEdit.innerHTML = "Rust"
+
+    // 2) approach Second
+    const newLi = document.createElement('li')
+    newLi.textContent = "Rust"
+    valueEdit.replaceWith(newLi)
+
+    const valueEdit1 = document.querySelector("li:first-child")
+    valueEdit1.outerHTML = '<li>Golang</li>'
+
+    // Remove
+    const valueEdit2 = document.querySelector("li:last-child")
+    valueEdit2.remove() 
+</script> 
+
+</html>
