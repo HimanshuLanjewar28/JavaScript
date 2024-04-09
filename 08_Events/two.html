@@ -9,19 +9,22 @@
     <h1>Chai aur code</h1>
     <button id="stop">Stop</button>
 </body>
+
 <script>
-    const sayHitesh = function(){
-        console.log("Hitesh");
-    }
-    const changeText = function(){
-        document.querySelector('h1').innerHTML = "best JS series"
-    }
+    
+    const name = (function(){
+        console.log("Himanshu")
+    })
 
-    const changeMe = setTimeout(changeText, 2000)
+    const changeName = function(){
+        document.querySelector('h1').innerHTML = "Himanshu"
+    }
+    const changeMe = setTimeout(changeName,2000)
+    setTimeout(name, 2000)
 
-    document.querySelector('#stop').addEventListener('click', function(){
+    document.querySelector('#stop').addEventListener('click',function(){
         clearTimeout(changeMe)
-        console.log("STOPPED")
+        console.log('Name change is stopped')
     })
 </script>
 </html>
