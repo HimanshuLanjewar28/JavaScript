@@ -1,2 +1,4 @@
-console.log(user.username);
-// c
+Object.defineProperty(chai,'name',{
+//     writable: false,
+//     enumerable: false
+// })
